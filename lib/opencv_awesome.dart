@@ -21,7 +21,7 @@ class OpencvAwesome {
         onError: port.sendPort,
         onExit: port.sendPort
     );
-    StreamSubscription sub;
+    StreamSubscription? sub;
     sub = port.listen((_) async {
       await sub?.cancel();
       oncompleted(output_path);
@@ -39,7 +39,7 @@ class OpencvAwesome {
         onError: port.sendPort,
         onExit: port.sendPort
     );
-    StreamSubscription sub;
+    StreamSubscription? sub;
     sub = port.listen((_) async {
       await sub?.cancel();
       oncompleted(output_path);
